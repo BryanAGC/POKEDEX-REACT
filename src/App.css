@@ -1,18 +1,22 @@
-body{
+body {
   background-color: #f4f6f9;
-  
+
 }
+
 .app {
   padding: 2rem;
   background: #f3f3f3;
-  height: auto; /* Mantiene el alto al 100% de la ventana */
-  width: 100vw; /* Asegura que el contenedor ocupe todo el ancho de la ventana */
+  height: auto;
+  /* Mantiene el alto al 100% de la ventana */
+  width: 100vw;
+  /* Asegura que el contenedor ocupe todo el ancho de la ventana */
   font-family: sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box; /* Evita que el padding aumente el tamaño total */
+  box-sizing: border-box;
+  /* Evita que el padding aumente el tamaño total */
 }
 
 
@@ -25,19 +29,28 @@ body{
 .title {
   font-size: 4.5rem;
   font-weight: bold;
-  color: #a040a0;
-  text-transform: uppercase; /* Transforma el texto a mayúsculas */
-  letter-spacing: 2px; /* Espaciado entre letras */
-  background: linear-gradient(to right, #a040a0, #a040a0); /* Gradiente de color */
-  -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
-  color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
-  transition: all 0.3s ease-in-out; /* Transición suave para efectos */
+  color: red;
+  text-transform: uppercase;
+  /* Transforma el texto a mayúsculas */  
+  letter-spacing: 2px;
+  /* Espaciado entre letras */
+  background: linear-gradient(to right, red, red);
+  /* Gradiente de color */
+  -webkit-background-clip: text;
+  /* Aplica el gradiente solo al texto */
+  color: transparent;
+  /* Hace que el texto sea transparente para mostrar el gradiente */
+  text-shadow: 2px 2px 4px rgb(255, 0, 0);
+  /* Sombra de texto */
+  transition: all 0.3s ease-in-out;
+  /* Transición suave para efectos */
 }
 
 .title:hover {
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Aumenta la sombra en hover */
-  transform: scale(1.05); /* Efecto de escalado en hover */
+  text-shadow: 2px 2px 10px red(0, 0, 0, 0.5);
+  /* Aumenta la sombra en hover */
+  transform: scale(1.05);
+  /* Efecto de escalado en hover */
 }
 
 .search-bar {
@@ -56,7 +69,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
-  flex-grow: 2;  /* Esto permite que la cuadrícula ocupe el espacio restante disponible */
+  flex-grow: 2;
 }
 
 .card {
@@ -88,10 +101,71 @@ body{
   text-transform: capitalize;
 }
 
-.type.grass { background-color: #78c850; }
-.type.poison { background-color: #a040a0; }
-.type.fire { background-color: #f08030; }
-.type.water { background-color: #6890f0; }
+.type.grass {
+  background-color: #78c850;
+}
+
+.type.poison {
+  background-color: #a040a0;
+}
+
+.type.fire {
+  background-color: #f08030;
+}
+
+.type.water {
+  background-color: #6890f0;
+}
+.type.ground {
+  background-color: #9e840f;
+}
+.type.electric {
+  background-color: #fbff00;
+  color: black;
+}
+.type.normal {
+  background-color: #27b3d6; 
+}
+.type.fairy {
+  background-color: #d6279c;
+}
+.type.bug {
+  background-color: #d66db3;
+}
+
+.type.fighting {
+  background-color: #c5b89f;
+}
+.type.psychic {
+  background-color: #895bc5;
+}
+.type.ghost {
+  background-color: #d9caec;
+  color: black;
+}
+
+.type.rock {
+  background-color: #858a5e;
+}
+.type.ice {
+  background-color: #2a13f7;
+}
+.type.dragon {
+  background-color: #f78d13;
+}
+
+.type.dark {
+  background-color: #302a50;
+}
+
+.type.steel {
+  background-color: #8c8c8f;
+}
+.type.flying {
+  background-color: #beb6ec;
+  color: black;
+}
+
 
 .stats {
   display: grid;
@@ -146,14 +220,14 @@ button {
   border-radius: 1em;
   outline: none;
   box-shadow: 0 0 1em .25em var(--glow-color),
-         0 0 4em 1em var(--glow-spread-color),
-         inset 0 0 .75em .25em var(--glow-color);
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
   text-shadow: 0 0 .5em var(--glow-color);
   position: relative;
   transition: all 0.3s;
- }
- 
- button::after {
+}
+
+button::after {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -165,18 +239,18 @@ button {
   filter: blur(2em);
   opacity: .7;
   transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
- }
- 
- button:hover {
+}
+
+button:hover {
   color: var(--btn-color);
   background-color: var(--glow-color);
   box-shadow: 0 0 1em .25em var(--glow-color),
-         0 0 4em 2em var(--glow-spread-color),
-         inset 0 0 .75em .25em var(--glow-color);
- }
- 
- button:active {
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
   box-shadow: 0 0 0.6em .25em var(--glow-color),
-         0 0 2.5em 2em var(--glow-spread-color),
-         inset 0 0 .5em .25em var(--glow-color);
- }
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 .5em .25em var(--glow-color);
+}
