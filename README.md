@@ -13,3 +13,9 @@ If you are developing a production application, we recommend using TypeScript an
 
 Ejecutar "npm install" para crear nodemodules
 Para iicializar "npm run dev"  o "npm start" y acceder a "http://localhost:5173/"
+## Configuracion.
+- **Instalar modulos:**
+  - npm install
+- **inicializacion:**
+  -  npm run dev
+  -  npm start
